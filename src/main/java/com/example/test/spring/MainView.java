@@ -6,6 +6,7 @@ import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -50,7 +51,10 @@ public class MainView extends VerticalLayout {
 
     startButton.addClickListener(click -> {
       username = usernameField.getValue();
+      Label userLog = new Label("Logged in as "+username);
+      userLog.addClassName("green");
       remove(layout);
+      add(userLog);
       startChat();
     });
 
