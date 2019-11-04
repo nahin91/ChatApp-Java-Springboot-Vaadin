@@ -1,0 +1,10 @@
+/target/
+.idea/
+.settings
+.project
+.classpath
+/src/main/webapp/frontend-es*/
+.vscode
+
+*.iml
+.DS_Store
